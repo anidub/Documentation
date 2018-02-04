@@ -1,0 +1,12 @@
+https://stackoverflow.com/questions/23329234/which-is-better-on-log-n-or-on2/23359505
+O(n log n) or O(n^2)
+
+
+So, O(N*log(N)) is far better than O(N^2). It is much closer to O(N) than to O(N^2).
+
+But your O(N^2) algorithm is faster for N < 100 in real life. There are a lot of reasons why it can be faster. 
+Maybe due to better memory allocation or other "non-algorithmic" effects. Maybe O(N*log(N)) algorithm requires some data preparation phase 
+or O(N^2) iterations are shorter. Anyway, Big-O notation is only appropriate in case of large enough Ns.
+
+If you want to demonstrate why one algorithm is faster for small Ns, you can measure execution time of 1 iteration and constant
+ overhead for both algorithms, then use them to correct theoretical plot:
